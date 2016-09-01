@@ -1,8 +1,8 @@
 Tablib: format-agnostic tabular dataset library
 ===============================================
 
-.. image:: https://travis-ci.org/kennethreitz/tablib.svg?branch=master
-    :target: https://travis-ci.org/kennethreitz/tablib
+.. image:: https://travis-ci.org/TiO2/tablib.svg?branch=master
+    :target: https://travis-ci.org/TiO2/tablib
 
 ::
 
