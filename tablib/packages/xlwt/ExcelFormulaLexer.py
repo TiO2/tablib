@@ -4,8 +4,8 @@ import sys
 from antlr import EOF, CommonToken as Tok, TokenStream, TokenStreamException
 import struct
 import ExcelFormulaParser
-from re import compile as recompile, match, LOCALE, UNICODE, IGNORECASE, VERBOSE
-
+#from re import compile as recompile, match, LOCALE, UNICODE, IGNORECASE, VERBOSE
+from re import compile as recompile, match, UNICODE, IGNORECASE, VERBOSE
 
 int_const_pattern = r"\d+\b"
 flt_const_pattern = r"""
@@ -51,7 +51,8 @@ pattern_type_tuples = (
 
 _re = recompile(
     '(' + ')|('.join([i[0] for i in pattern_type_tuples]) + ')',
-    VERBOSE+LOCALE+IGNORECASE)
+#    VERBOSE+LOCALE+IGNORECASE)
+    VERBOSE+IGNORECASE)
 
 _toktype = [None] + [i[1] for i in pattern_type_tuples]
 # need dummy at start because re.MatchObject.lastindex counts from 1
